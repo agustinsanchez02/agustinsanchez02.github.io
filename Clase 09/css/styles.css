@@ -1,0 +1,306 @@
+* {
+    font-family: "Roboto", "Arial", sans-serif;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+nav > ul {
+    display: none;
+}
+
+nav > a {
+    display: block;
+    margin: 25% 0;
+}
+
+nav > a > img {
+    width: 50px;
+    height: 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+main > div {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.Noticias {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 0px;
+}
+
+.Noticias button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.Noticias > div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid #000;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+article > h3 {
+    margin: 0;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #000;
+    border-radius: 0px 0px 5px 5px;
+}
+
+aside > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-self: flex-end;
+}
+
+aside > p {
+    margin: 0;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    align-content: center;
+    gap: 20px; /* Increase gap between form fields */
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Increase gap between inner form elements */
+}
+
+.campos {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px; /* Add margin to increase space between fields */
+    flex-wrap: wrap;
+    width: 350px;
+}
+
+.campos label {
+    margin-bottom: 5px; /* Add space between label and input */
+}
+
+.campos input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px; /* Add padding for better spacing within input */
+    margin-bottom: 5px; /* Add space between input and error message */
+}
+
+.campos span {
+    display: flex;
+    color: red;
+    flex-wrap: wrap;
+    font-size: 0.9em;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    main > div {
+        width: 50%;
+        flex-shrink: 1;
+        flex-grow: 3;
+    }
+
+    main > aside {
+        flex-shrink: 2;
+    }
+
+    .Noticias > div {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    article {
+        width: 100%;
+    }
+
+    article > img {
+        height: 200px;
+        flex-grow: 1;
+    }
+
+    aside {
+        border: #000 solid 1px;
+        border-radius: 5px;
+    }
+
+    aside > img {
+        align-self: center;
+    }
+
+    .todosCampos {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    form > div {
+        flex-direction: column;
+        gap: 20px; /* Increase gap between inner form elements for larger screens */
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header > nav > a {
+        display: none;
+    }
+
+    header > nav > ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-content: center;
+    }
+
+    header > nav > ul > li {
+        list-style: none;
+    }
+
+    .Opciones {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    main {
+        padding: 30px;
+    }
+
+    main > div {
+        gap: 20px;
+        height: auto;
+    }
+
+    .Noticias {
+        gap: 20px;
+        width: 97%;
+    }
+
+    .Noticias > div {
+        gap: 20px;
+    }
+
+    article {
+        margin: 5px;
+        overflow: hidden;
+    }
+
+    article > h3 {
+        padding: 20px;
+    }
+
+    article > img {
+        height: 300px;
+    }
+
+    aside {
+        padding: 20px;
+    }
+
+    aside > img {
+        width: 30px;
+        height: 30px;
+    }
+
+    aside > p {
+        padding: 20px;
+    }
+
+    button:hover {
+        background-color: #fff;
+        color: #000;
+    }
+
+    article:hover h3 {
+        background-color: #7300ff;
+        color: #fff;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    article:hover img {
+        transform: scale(1.1);
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+}

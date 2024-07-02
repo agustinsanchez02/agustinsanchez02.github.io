@@ -1,0 +1,368 @@
+/* Estilo base para todo el documento */
+* {
+    font-family: 'Encode Sans', sans-serif;
+}
+
+/* Encabezado principal */
+header {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: #ffffff;
+    color: #202020; /* Cambiado para mejor legibilidad */
+    padding: 10px;
+    margin-bottom: 10px; /* Reemplazado margen individual */
+}
+
+/* Logo en el encabezado */
+header > img {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    height: 60px;
+    width: 200px; /* Ajuste de tamaño */
+}
+
+/* Sección gris del encabezado */
+.grayHeader {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    right: 5px;
+}
+
+.grayHeader a,
+#fecha {
+    padding: 10px;
+    text-decoration: none;
+    color: darkgray;
+}
+
+/* Sección inferior del encabezado */
+.bottomHeader {
+    position: absolute;
+    padding: 0;
+    border-top: 2px solid #ff8000;
+    width: calc(100% - 220px); /* Ajuste de ancho */
+    height: 60px;
+    top: 70px; /* Ajuste de posición */
+    right: 0;
+}
+
+.bottomHeader nav{
+    position: absolute;
+    right: 0;
+}
+
+.bottomHeader a,
+.bottomFooter a {
+    padding: 10px;
+    text-decoration: none;
+    color: #ff8000;
+}
+
+/* Contenido principal */
+main {
+    margin: 40px auto;
+    max-width: 1200px; /* Ajuste de ancho máximo */
+}
+
+main img {
+    width: 100%;
+    height: auto;
+}
+
+main h1 {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 800;
+    margin-bottom: 20px; /* Ajuste de margen */
+}
+
+main h3 > a {
+    background-color: #ff8000;
+    color: white;
+    padding: 8px 12px; /* Ajuste de espaciado */
+    text-decoration: none;
+    font-size: 16px; /* Ajuste de tamaño */
+}
+
+main h3 > a:hover {
+    text-decoration: underline;
+}
+
+main section {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+main section > h4 {
+    position: absolute;
+    font-size: 13px;
+    color: darkgray;
+    top: 0;
+    right: 0;
+    margin-top: 0; /* Ajuste de margen */
+}
+
+/* División superior del pie de página */
+#TopDivFromFooter,
+#SecondImageDiv {
+    border-bottom: 2px solid #ff8000;
+}
+
+/* Pie de página */
+footer {
+    border-top: 10px solid #ff8000;
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#TopImageFromFooter {
+    display: block;
+    margin: auto;
+    padding: 30px;
+}
+
+footer div,
+footer nav {
+    margin: auto;
+    width: 80%;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 640px) {
+    header {
+        background-color: #F15A08;
+        height: 45px;
+    }
+
+    #logoDesktop {
+        display: none;
+    }
+
+    #logoMobile {
+        display: block;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        width: 135px;
+        height: 37px;
+    }
+    .bottomHeader {
+        border-top: none;
+        position: absolute;
+        top: 0;
+        right: 25px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .grayHeader {
+        display: none;
+    }
+
+    main {
+        margin: 80px 5%;
+    }
+
+    main h1 {
+        font-size: 25px;
+        line-height: 40px;
+    }
+    main h2 {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    main h4 {
+        display: none;
+    }
+
+    main h3 > a {
+        background-color: transparent;
+        color: #F15A08;
+        border-top: #F15A08 solid 2px;
+    }
+
+    main section > h4 {
+        font-size: 10px;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    #TopImageFromFooter {
+        padding: 10px;
+    }
+
+    #SecondImageDiv {
+        display: none;
+    }
+
+    footer div,
+    footer nav {
+        width: 100%;
+    }
+
+    /* Estilos para el menú hamburguesa */
+    .bottomImages {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    .bottomImages > a{
+        display: none;
+    }
+
+    .bottomImages > #menuBurger {
+        display: block;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+    }
+    #menuBurger > img {
+        display: block;
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+    }
+}
+
+
+/* Estilos para tabletas */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+
+    /* Estilos para el menú Header */
+    header {
+        background-color: #F15A08;
+        height: 45px;
+    }
+
+    #logoDesktop {
+        display: none;
+    }
+
+    #logoMobile {
+        display: block;
+        position: absolute;
+        top: 13px;
+        left: 10px;
+        width: 135px;
+        height: 37px;
+    }
+    .bottomHeader {
+        border-top: none;
+        position: absolute;
+        top: 0px;
+        right: 25px;
+        margin: 20px 50px 0 0;
+        padding: 0;
+    }
+
+    .grayHeader {
+        display: none;
+    }
+    .bottomImages {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    .bottomImages > a{
+        color: white;
+    }
+
+    .bottomImages > #menuBurger > img {
+        display: block;
+        height: 60px;
+        width: 60px;
+        position: absolute;
+        top: -20px;
+        right: -40px;
+        margin: 0;
+    }
+    /* Estilos del resto de la página */
+    main {
+        margin: 80px 5%;
+    }
+
+    main h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    main h4 {
+        display: none;
+    }
+
+    main h3 > a {
+        background-color: transparent;
+        color: #F15A08;
+        border-top: #F15A08 solid 2px;
+    }
+
+    main section > h4 {
+        font-size: 10px;
+    }
+
+    footer {
+        height: 150px;
+    }
+
+    #TopImageFromFooter {
+        padding: 10px;
+    }
+
+    #SecondImageDiv {
+        display: none;
+    }
+
+    footer div,
+    footer nav {
+        width: 100%;
+    }
+
+    
+}
+
+/* Estilos para dispositivos de escritorio */
+@media screen and (min-width: 1025px) {
+    header {
+        width: 99%;
+    }
+    #logoDesktop {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        height: 60px;
+        width: 235px;
+    }
+    #logoMobile {
+        display: none;
+    }
+
+    main {
+        margin: 40px 35% 0 20%;
+    }
+
+    footer div,
+    footer nav {
+        width: 80%;
+    }
+    .bottomHeader{
+        width: 80%
+    }
+}
